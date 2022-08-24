@@ -49,3 +49,84 @@ print("Sum of series for first "+str(n+1)+" is : "+ str(sum))
 
 # Insert value on n : 5
 # Sum of series for first 6 is : 0.7489711934156379
+
+#problem 4
+
+number = input("Insert a number: ")
+length = len(number)
+#number = int(number)
+sum = 0
+
+for digit in number:
+  sum += pow(int(digit),length)
+
+if(sum == int(number)):
+  print(number + " is an Armstrong number")
+else:
+  print(number + " is NOT an Armstrong number")
+
+# Insert a number: 1634
+# 1634 is an Armstrong number
+
+#problem 5
+
+#n = int(input("Insert Digit Number: "))
+n = int(input("Insert Digit Number: "))
+count = 0
+threshold = 10
+digit_sum = 0
+
+first_number = pow(10,n-1)
+last_number = pow(10,n) - 1
+
+for num in range(first_number,last_number+1):
+  num_str = str(num)
+  digit_sum = 0
+
+  for digit in num_str:
+    digit_sum += int(digit)
+  
+  if num%digit_sum == 0:
+    count+=1
+    print(str(num))
+
+    if count == threshold:
+      break
+
+# Insert Digit Number: 2
+# 10
+# 12
+# 18
+# 20
+# 21
+# 24
+# 27
+# 30
+# 36
+# 40
+  
+
+# problem 6
+
+input_string = input("Insert Input: ")
+
+if input_string == input_string[::-1]:
+  print(input_string+" is a palindrom")
+else:
+  print(input_string+" is NOT a palindrom")
+
+# Insert Input: aq1qa
+# aq1qa is a palindrom
+
+#problem 7
+
+alpha = 0.306
+T = 6.96*(10**8)
+R = 6.96 * (10**8)
+D = 1.496 * (10**11)
+Sigma = 1.2
+
+Tp = T*(R*(((1-alpha)/Sigma)**0.5)/(2*D))**0.5
+
+print(Tp)
+#29273700.208881717

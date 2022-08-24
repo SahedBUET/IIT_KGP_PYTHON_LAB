@@ -130,3 +130,19 @@ Tp = T*(R*(((1-alpha)/Sigma)**0.5)/(2*D))**0.5
 
 print(Tp)
 #29273700.208881717
+
+#problem 10
+
+h = int(input("Insert the height: "))
+n = int(input("Insert the bounce count: "))
+total_dist = 0
+
+if(n == 0):
+  print("Bounce count can not be 0")
+elif(n == 1):
+  total_dist = h
+else:
+  r = 1/4
+  total_dist = h +  (h/2)*(1-r**(n-1))/(1-r)
+
+print("Total Distance : "+str(total_dist))
